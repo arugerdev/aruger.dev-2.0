@@ -1,12 +1,27 @@
 /* eslint-disable react/prop-types */
 import { Button, Link } from "@nextui-org/react"
 import { motion, useScroll, useTransform } from "framer-motion"
-import React, { useRef } from "react"
+import React, { useEffect, useRef, useState } from "react"
 import { IconBrandGithubFilled } from "@tabler/icons-react"
 import { PhotoChanger } from "../PhotoChanger"
+import { getImage } from "../../hooks/getImage"
 
 export const ProjectCard = ({ name, descriptions, images, githubURL, websiteURL }) => {
   const ref = useRef()
+  const [imagesSrc, setImagesSrc] = useState([])
+
+
+  useEffect(() => {
+    let newImagesSrc = Array.from(images)
+
+    for (let i = 0; i < newImagesSrc.length; i++) {
+      const src = getImage(newImagesSrc[i].imagePath);
+
+      newImagesSrc[i] = src
+    }
+
+    setImagesSrc(newImagesSrc)
+  }, [images])
 
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -18,6 +33,7 @@ export const ProjectCard = ({ name, descriptions, images, githubURL, websiteURL 
   const opacity = useTransform(scrollYProgress, [0.75, 0], ["1", "0"])
 
 
+
   return (
     <motion.section
       style={{ opacity }}
@@ -25,7 +41,7 @@ export const ProjectCard = ({ name, descriptions, images, githubURL, websiteURL 
       className="flex flex-row gap-4  p-4 bg-black rounded-[48px]">
       <motion.div className="w-1/2 p-5" style={{ x: xL, opacity }}
         transition={{ duration: 0.25 }}>
-        <PhotoChanger images={images} />
+        <PhotoChanger images={imagesSrc} />
       </motion.div>
       <motion.div className="flex flex-col w-1/2 p-6" style={{ x: xR, opacity }}
         transition={{ duration: 0.25 }}>

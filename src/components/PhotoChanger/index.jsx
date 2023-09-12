@@ -20,7 +20,9 @@ export const PhotoChanger = ({ images }) => {
   },);
 
   const slideRight = () => {
-    setCurrent(current === images.length - 1 ? 0 : current + 1);
+    if ((images.length > 1))
+
+      setCurrent(current === images.length - 1 ? 0 : current + 1);
   };
 
 
@@ -30,11 +32,11 @@ export const PhotoChanger = ({ images }) => {
         images.map((img, i) => {
 
           return < Image
-            key={`img_${i}____${img.id}`}
+            key={`img_${i}____${img}`}
             isBlurred={!isMobile}
             isZoomed
             radius='lg'
-            src={img.imagePath}
+            src={img}
             className={`p-0 m-0 carousel_card ${(i == current
               ? "carousel_card-active"
               : "")} `}

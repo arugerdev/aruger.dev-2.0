@@ -16,13 +16,13 @@
       "id": 0,
       "images": [
         {
-          "imagePath": "src/assets/images/projects/babi_0.jpg"
+          "imagePath": 0
         },
         {
-          "imagePath": "src/assets/images/projects/babi_1.jpg"
+          "imagePath": 1
         },
         {
-          "imagePath": "src/assets/images/projects/babi_2.jpg"
+          "imagePath": 2
         }
       ],
       "name": "Babi Website",
@@ -44,13 +44,13 @@
       "id": 1,
       "images": [
         {
-          "imagePath": "src/assets/images/projects/listy_0.jpg"
+          "imagePath": 10
         },
         {
-          "imagePath": "src/assets/images/projects/listy_1.jpg"
+          "imagePath": 11
         },
         {
-          "imagePath": "src/assets/images/projects/listy_2.jpg"
+          "imagePath": 12
         }
       ],
       "name": "LisTyDo",
@@ -72,13 +72,13 @@
       "id": 2,
       "images": [
         {
-          "imagePath": "src/assets/images/projects/whatToDo_0.jpg"
+          "imagePath": 13
         },
         {
-          "imagePath": "src/assets/images/projects/whatToDo_1.jpg"
+          "imagePath": 14
         },
         {
-          "imagePath": "src/assets/images/projects/whatToDo_2.jpg"
+          "imagePath": 15
         }
       ],
       "name": "WhatToDo",
@@ -106,7 +106,7 @@
       "id": 3,
       "images": [
         {
-          "imagePath": "src/assets/images/projects/imagesaver_0.jpg"
+          "imagePath": 9
         }
       ],
       "name": "ImageSaver (DB Paused)",
@@ -128,22 +128,22 @@
       "id": 4,
       "images": [
         {
-          "imagePath": "src/assets/images/projects/games_0.jpg"
+          "imagePath": 3
         },
         {
-          "imagePath": "src/assets/images/projects/games_1.jpg"
+          "imagePath": 4
         },
         {
-          "imagePath": "src/assets/images/projects/games_2.jpg"
+          "imagePath": 5
         },
         {
-          "imagePath": "src/assets/images/projects/games_3.jpg"
+          "imagePath": 6
         },
         {
-          "imagePath": "src/assets/images/projects/games_4.jpg"
+          "imagePath": 7
         },
         {
-          "imagePath": "src/assets/images/projects/games_5.jpg"
+          "imagePath": 8
         }
       ],
       "name": "Games (In Itch.io)",
