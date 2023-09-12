@@ -1,4 +1,4 @@
-import { Card, CardHeader, CardBody, CardFooter, Image } from "@nextui-org/react"
+import { Card, CardHeader, CardBody, Image } from "@nextui-org/react"
 import { motion, useScroll, useTransform } from "framer-motion"
 import Me from '../../assets/images/me_1.png'
 import { useRef, useEffect, useState } from "react"
@@ -44,21 +44,20 @@ export default function About() {
       whileInView={{ opacity: 1 }}>
       <Card className='rounded-[70px] w-full' shadow="sm">
         <CardHeader className='overflow-visible p-12 items-start justify-start'>
-          <h3 className='font-bold text-[#A5A1FF] md:text-xl	text-xs'>About</h3>
+          <h3 className='font-bold text-[#A5A1FF] text-xl'>About</h3>
         </CardHeader>
         <CardBody className="overflow-visible p-12 pb-0  items-start justify-start gap-2">
-          <h1 className='font-sans md:text-6xl 	text-xl font-normal text-[#A5A1FF]'>About Me</h1>
-
+          <h1 className={`font-sans text-6xl ${(isMobile ? 'text-center' : 'text-start')} font-normal text-[#A5A1FF] w-full`}>About Me</h1>
           <section className="flex flex-col w-full h-full items-center justify-center">
-            <section className="flex flex-col lg:flex-row w-full">
-              <motion.div className="flex flex-row lg:w-1/2 w-full p-5" style={{ x: xL, opacity }}
+            <section className={`flex  ${isMobile ? 'flex-col items-center justify-center' : 'flex-row'}  w-full`}>
+              <motion.div className={`flex flex-row ${isMobile ? 'w-full items-center justify-center' : 'w-1/2'} p-5`} style={{ x: xL, opacity }}
                 transition={{ duration: 0.25 }}>
-                <Image isZoomed isBlurred={!isMobile} draggable={false} src={Me} width={'80%'} height={'80%'} style={{ objectFit: 'contain', placeItems: 'center', justifyItems: 'center' }} className="items-center justify-center"></Image>
+                <Image isZoomed isBlurred={!isMobile} draggable={false} src={Me} width={'600px'} height={'600px'} style={{ objectFit: 'contain', placeItems: 'center', justifyItems: 'center' }} className="items-center justify-center"></Image>
               </motion.div>
-              <motion.div className="flex flex-col p-5 lg:w-1/2 w-full" style={{ x: xR, opacity }}
+              <motion.div className={`flex flex-col p-5 ${isMobile ? 'w-full items-center justify-center' : 'w-1/2'}`} style={{ x: xR, opacity }}
                 transition={{ duration: 0.25 }}>
 
-                <h1 className="mb-2 font-mono text-2xl text-gray-100 md:text-4xl">
+                <h1 className={`mb-2 font-mono text-gray-100 ${(isMobile ? 'text-8xl' : 'text-4xl')}`}>
                   <span className="relative">
                     <span className="h-20 pt-2 overflow-x-hidden whitespace-nowrap text-brand-accent text-[#A5A1FF]">
                       -{">"} Aruger Dev {"<"}-
@@ -69,12 +68,12 @@ export default function About() {
                   </span>
                 </h1>
 
-                <h1 className='font-sans md:text-2xl 	text-xs font-normal text-[gray] pb-4'>Álvaro Ruger Chambra</h1>
+                <h1 className={`font-sans ${(isMobile ? 'text-4xl' : 'text-2xl')} font-normal text-[gray] pb-4`}>Álvaro Ruger Chambra</h1>
 
-                <p className="font-sans md:text-xl text-2xs	">Hi!
+                <p className={`font-sans ${(isMobile ? 'text-center  text-4xl' : 'text-start text-xl')}`}>Hi!
                   <br className="block" />
                   Here you will meet me, leaving my work aside a little.</p>
-                <p className="font-sans md:text-xl text-2xs	max-w-prose	">I am a quiet boy, <strong>{yearsOld} years old</strong>, I currently live in <strong>Spain</strong>, I dedicate myself entirely to <strong>computing</strong> and <strong>technology</strong>.
+                <p className={`font-sans ${(isMobile ? 'text-justify  text-4xl' : 'text-start text-xl')} max-w-prose`}>I am a quiet boy, <strong>{yearsOld} years old</strong>, I currently live in <strong>Spain</strong>, I dedicate myself entirely to <strong>computing</strong> and <strong>technology</strong>.
                   <br className="block" />
                   <br className="block" />
                   I&apos;m a <strong>programmer</strong>, <strong>telecommunications technician</strong>, <strong>microcomputer systems and network technician</strong>.
@@ -96,23 +95,25 @@ export default function About() {
             </section>
 
           </section>
-        </CardBody>
-        <CardFooter>
-          <motion.section ref={ref2} className="w-full p-12 flex lg:flex-row flex-col items-start justify-start pt-0">
-            <motion.section className="lg:w-1/2 w-full p-5 flex flex-col items-center justify-center" style={{ x: xL2, opacity: opacity2 }}
+          <motion.section ref={ref2} className={`w-full flex ${(isMobile ? 'flex-col items-center justify-center' : 'flex-row items-start justify-start')}`}>
+            <motion.section
+              className={` ${(isMobile ? 'w-full' : 'w-1/2')} p-5 flex flex-col items-center justify-center`}
+              style={(isMobile ? {} : { x: xL2, opacity: opacity2 })}
               transition={{ duration: 0.25 }}>
 
-              <p className="font-sans items-start justify-start md:text-xl text-2xs	max-w-prose	">
+              <p className={`font-sans  ${(isMobile ? 'text-4xl items-center justify-center text-justify' : 'text-xl items-start justify-start text-start')}	max-w-prose	`}>
                 Maybe I&apos;m too talkative and write too much about myself, but I like people to know me at least a little before thinking about working with me or not.
                 <br className="block" />
                 <br className="block" />
                 I am fascinated by video games, and that is why I make them, they seem like an incredible way to express oneself creatively. My first videogame was God Of War 2, played on the ps2 where my older brother taught me to play with a console for the first time, after that I spent hours playing it over and over again, until I saw Kingdom Hearts 1, I loved its story and to this day it is still my favorite saga.
               </p>
             </motion.section>
-            <motion.section className="items-start justify-start lg:w-1/2 w-full p-5 flex flex-col" style={{ x: xR2, opacity: opacity2 }}
+            <motion.section
+              className={` ${(isMobile ? 'w-full items-center justify-center text-justify' : 'w-1/2 items-start justify-start text-start')} p-5 flex flex-col `}
+              style={(isMobile ? {} : { x: xR2, opacity: opacity2 })}
               transition={{ duration: 0.25 }}>
 
-              <p className="font-sans md:text-xl text-2xs	max-w-prose	">
+              <p className={`font-sans  ${(isMobile ? 'text-4xl items-center justify-center text-justify' : 'text-xl items-start justify-start text-start')}	max-w-prose	`}>
                 I studied at a conservatory for 2 years and although I did not complete the entire course and did not receive the degree, I learned a lot of interesting things, and without a doubt, I am a good pianist.
                 <br className="block" />
                 <br className="block" />
@@ -123,7 +124,7 @@ export default function About() {
               </p>
             </motion.section>
           </motion.section>
-        </CardFooter>
+        </CardBody>
       </Card>
     </motion.section >
   )
