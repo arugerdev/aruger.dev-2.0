@@ -1,0 +1,184 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.header>header {
+  max-width: none;
+}
+
+* {
+  cursor: none;
+  scroll-behavior: smooth;
+}
+
+/* :root{
+  overflow: hidden;
+} */
+
+.backgroundSquare {
+  position: absolute;
+  z-index: 0;
+  width: 1000px;
+  height: 1000px;
+  background-color: #666;
+  filter: blur(5000px);
+  transform: translate(-50%, -50%);
+}
+
+body {
+  overflow-x: hidden;
+  /* Hide horizontal scrollbar */
+}
+
+html,
+body {
+  cursor: none;
+  overscroll-behavior: none;
+}
+
+.customCursor {
+  pointer-events: none;
+
+}
+
+
+.carousel_card {
+  display: none;
+  position: relative;
+  width: 100%;
+  flex: 1;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.8);
+  transition: 0.5s ease-in-out;
+
+  animation: fallOff 0.3s forwards;
+}
+
+.carousel_card-active {
+  display: flex;
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: visible;
+
+  animation: fallOn 0.3s forwards;
+}
+
+@keyframes fallOff {
+  0% {
+    display: flex;
+    opacity: 1;
+    filter: brightness(100%);
+
+  }
+
+  50% {
+    opacity: 0;
+    filter: brightness(0%);
+    display: none;
+  }
+
+  100% {
+    opacity: 0;
+    filter: brightness(0%);
+    display: none;
+  }
+
+}
+
+@keyframes fallOn {
+  0% {
+    opacity: 0;
+    filter: brightness(0%);
+    display: none;
+  }
+
+  50% {
+    opacity: 0;
+    filter: brightness(0%);
+    display: none;
+  }
+
+  100% {
+    display: flex;
+    opacity: 1;
+    filter: brightness(100%);
+  }
+
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 0;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.cursor::after {
+  display: block;
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 100%;
+  background-color: #fff;
+  animation: cursor 0.4s linear infinite alternate;
+  will-change: opacity;
+}
+
+@keyframes cursor {
+
+  0%,
+  40% {
+    opacity: 1;
+  }
+
+  60%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.instagram {
+  background: #f09433;
+  background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
+}
+
+.twitter {
+  background: #000;
+}
+
+.coffee {
+  background: #ffdd00;
+  color: black;
+}
+
+.itch {
+  background: #fa5c5c;
+}
+
+.github {
+  background: #1c2128;
+}
+
+.linkedin {
+  background: #0a66c2;
+  color: white;
+}

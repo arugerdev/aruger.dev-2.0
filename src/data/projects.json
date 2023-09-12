@@ -1,0 +1,153 @@
+{
+  "projects": [
+    {
+      "descriptions": [
+        {
+          "description": "A website of Babi, a Spanish-speaking singer, you can find her music on YouTube and Spotify."
+        },
+        {
+          "description": "In it you can find a list of their songs and buttons to take you to listen to each one of them. You can also find her contact information, along with some information about the artist and her life."
+        },
+        {
+          "description": "It is a non-profit web made, only out of fanaticism and with affection towards the artist."
+        }
+      ],
+      "gitHubURL": "https://github.com/arugerdev/pillz4babi-website",
+      "id": 0,
+      "images": [
+        {
+          "imagePath": "src/assets/images/projects/babi_0.jpg"
+        },
+        {
+          "imagePath": "src/assets/images/projects/babi_1.jpg"
+        },
+        {
+          "imagePath": "src/assets/images/projects/babi_2.jpg"
+        }
+      ],
+      "name": "Babi Website",
+      "websiteURL": "https://babi.vercel.app/"
+    },
+    {
+      "descriptions": [
+        {
+          "description": "A web where you can create lists, with several columns, and elements. Be neat!"
+        },
+        {
+          "description": "Each element is editable, and you can select the color of each list or each column, for more customization when ordering. You can also move items between columns from left to right."
+        },
+        {
+          "description": "It has mobile support, it uses LocalStorage, therefore, your lists will remain on the device and are not deleted unless you want it to."
+        }
+      ],
+      "gitHubURL": "https://github.com/arugerdev/LisTyDo-React-App",
+      "id": 1,
+      "images": [
+        {
+          "imagePath": "src/assets/images/projects/listy_0.jpg"
+        },
+        {
+          "imagePath": "src/assets/images/projects/listy_1.jpg"
+        },
+        {
+          "imagePath": "src/assets/images/projects/listy_2.jpg"
+        }
+      ],
+      "name": "LisTyDo",
+      "websiteURL": "https://listydo-arugerdev.vercel.app/"
+    },
+    {
+      "descriptions": [
+        {
+          "description": "WhatToDo is a website where you can randomly generate an idea to do and not get bored."
+        },
+        {
+          "description": "Use an api (BoredApi), together with it you can filter a series of values ​​to choose an idea that suits your needs."
+        },
+        {
+          "description": "It was created mainly to learn how fetch to Apis works with React."
+        }
+      ],
+      "gitHubURL": "https://github.com/arugerdev/WhatToDo-React-App",
+      "id": 2,
+      "images": [
+        {
+          "imagePath": "src/assets/images/projects/whatToDo_0.jpg"
+        },
+        {
+          "imagePath": "src/assets/images/projects/whatToDo_1.jpg"
+        },
+        {
+          "imagePath": "src/assets/images/projects/whatToDo_2.jpg"
+        }
+      ],
+      "name": "WhatToDo",
+      "websiteURL": "https://whattodo-arugerdev.vercel.app/"
+    },
+    {
+      "descriptions": [
+        {
+          "description": "THE DATABASE OF THIS PAGE IS CURRENTLY PAUSED, AND THE WEBSITE WILL NOT WORK AGAIN UNLESS IT IS ACTIVATED AGAIN"
+        },
+        {
+          "description": ""
+        },
+        {
+          "description": "In ImageSaver you can save the photos and videos you want, take them to any other device just by entering the page and downloading the photos you want."
+        },
+        {
+          "description": "SupaBase is used as a database, having a free membership if the database does not receive any request, after a while, it is paused until it is reactivated again."
+        },
+        {
+          "description": "This was the first contact with an App with user accounts and databases"
+        }
+      ],
+      "gitHubURL": "https://github.com/arugerdev/image-saver",
+      "id": 3,
+      "images": [
+        {
+          "imagePath": "src/assets/images/projects/imagesaver_0.jpg"
+        }
+      ],
+      "name": "ImageSaver (DB Paused)",
+      "websiteURL": "https://image-saver.vercel.app/"
+    },
+    {
+      "descriptions": [
+        {
+          "description": "You can also see and play all my games on Itch.io"
+        },
+        {
+          "description": "There will be more soon, ready for you to play!"
+        },
+        {
+          "description": "If you have any questions you can contact me and tell me what you need."
+        }
+      ],
+      "gitHubURL": "",
+      "id": 4,
+      "images": [
+        {
+          "imagePath": "src/assets/images/projects/games_0.jpg"
+        },
+        {
+          "imagePath": "src/assets/images/projects/games_1.jpg"
+        },
+        {
+          "imagePath": "src/assets/images/projects/games_2.jpg"
+        },
+        {
+          "imagePath": "src/assets/images/projects/games_3.jpg"
+        },
+        {
+          "imagePath": "src/assets/images/projects/games_4.jpg"
+        },
+        {
+          "imagePath": "src/assets/images/projects/games_5.jpg"
+        }
+      ],
+      "name": "Games (In Itch.io)",
+      "websiteURL": "https://alvaroch.itch.io/"
+    }
+  ]
+}
