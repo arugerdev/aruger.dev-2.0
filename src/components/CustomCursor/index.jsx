@@ -33,7 +33,7 @@ export const CustomCursor = () => {
     <div className="customCursor">
       <motion.div
         className="cursor__ball cursor__ball--big  fixed"
-        style={{ mixBlendMode: '', background: '#fff', opacity: 0.5, borderRadius: '9999px', zIndex: 1000 }}
+        style={{ mixBlendMode: '', background: '#fff', opacity: 0.5, borderRadius: '9999px', zIndex: 9999999999 }}
         animate={{ x: mousePosition.x - 15, y: mousePosition.y - 15, scale: targetScale }}
         spring={{ mass: 1, stiffness: 200, damping: 50 }}
       >
@@ -44,7 +44,7 @@ export const CustomCursor = () => {
 
       <motion.div
         className="cursor__ball cursor__ball--small fixed"
-        style={{ top: mousePosition.y - 7, left: mousePosition.x - 5, mixBlendMode: '', background: '#fff', opacity: 0.5, borderRadius: '9999px', zIndex: 1000 }}
+        style={{ top: mousePosition.y - 7, left: mousePosition.x - 5, mixBlendMode: '', background: '#fff', opacity: 0.5, borderRadius: '9999px', zIndex: 99999999999 }}
         animate={{ scale: targetScale }}
         spring={{ mass: 1, stiffness: 200, damping: 50 }}
       >
