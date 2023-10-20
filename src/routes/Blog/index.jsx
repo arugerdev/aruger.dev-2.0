@@ -1,12 +1,14 @@
-import BlogPage from "../../pages/BlogPage"
+import BlogsPage from "../../pages/BlogsPage"
 import { CustomCursor } from "../../components/CustomCursor"
 import { BrowserView } from "react-device-detect"
 import { Toaster, toast } from "sonner"
 import { useEffect } from "react"
 import { Button } from "@nextui-org/react"
 import { isMobile } from "react-device-detect"
+import BlogPage from "../../pages/BlogPage"
 
 export default function Blog() {
+  const blogId = (window.location.search.includes('?id=') ? parseInt(window.location.search.replace('?id=', '')) : '')
 
   useEffect(() => {
     toast(<div className="flex flex-row items-center justify-center gap-2">
@@ -17,7 +19,7 @@ export default function Blog() {
       <p>This section is only avalible in Spanish!</p>
       <Button
         size={(isMobile ? 'md' : 'sm')}
-        className={`font-bold cursor-none hoverable ${(isMobile ? ' w-1/2 h-[128px] text-3xl' : '')}`}
+        className={`cursor-none hoverable font-bold ${(isMobile ? 'w-1/2 h-[128px] text-3xl' : '')}`}
         target="blank"
         isBlock
         color="warning"
@@ -25,8 +27,7 @@ export default function Blog() {
         showAnchorIcon
         onPress={() => toast.dismiss()}
         variant="shadow"> OK </Button>
-    </div>
-    )
+    </div>)
   }, [])
 
   return (
@@ -35,7 +36,12 @@ export default function Blog() {
       <BrowserView>
         <CustomCursor />
       </BrowserView>
-      <BlogPage />
+      {(typeof (blogId) === 'number') &&
+        < BlogPage id={blogId} />
+      }
+      {(typeof (blogId) !== 'number') &&
+        < BlogsPage />
+      }
     </>
   )
 }

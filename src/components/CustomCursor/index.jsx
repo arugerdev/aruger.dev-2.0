@@ -10,6 +10,9 @@ export const CustomCursor = () => {
     const $hoverables = document.querySelectorAll('.hoverable');
 
     for (let i = 0; i < $hoverables.length; i++) {
+      $hoverables[i].removeEventListener('mouseenter', onMouseHover);
+      $hoverables[i].removeEventListener('mouseleave', onMouseHoverOut);
+
       $hoverables[i].addEventListener('mouseenter', onMouseHover);
       $hoverables[i].addEventListener('mouseleave', onMouseHoverOut);
     }
@@ -22,9 +25,7 @@ export const CustomCursor = () => {
       setTargetScale(1)
     }
 
-  }, [])
-
-
+  })
 
 
   return (
