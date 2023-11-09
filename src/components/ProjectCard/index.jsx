@@ -34,7 +34,6 @@ export const ProjectCard = ({ name, descriptions, images, githubURL, websiteURL 
   const opacity = useTransform(scrollYProgress, [0.75, 0], ["1", "0"])
 
 
-
   return (
     <motion.section
       style={{ opacity }}
@@ -47,11 +46,11 @@ export const ProjectCard = ({ name, descriptions, images, githubURL, websiteURL 
       <motion.div className={`flex flex-col ${(isMobile ? 'w-full' : 'w-1/2')} p-6`} style={{ x: xR, opacity }}
         transition={{ duration: 0.25 }}>
         <h3 className=" font-bold text-[#A5A1FF] lg:text-4xl text-2xl">{name}</h3>
-        <div className=" flex flex-col items-start pt-6">
+        <div className=" flex flex-col justify-center items-start pt-6">
           {descriptions.map(
             (desc, id) => {
               return <React.Fragment key={`desc_${desc.description + id}_frag`}>
-                <p key={`desc_${desc.description + id}`} className={`font-bold ${(isMobile ? 'text-4xl' : 'text-xl')} w-full `}>{desc.description}</p>
+                <p key={`desc_${desc.description + id}`} className={`${(isMobile ? 'text-4xl' : 'text-xl')} w-full `}>{desc.description}</p>
                 <br />
               </React.Fragment>
             }
@@ -62,12 +61,12 @@ export const ProjectCard = ({ name, descriptions, images, githubURL, websiteURL 
           {(githubURL !== "" || githubURL) &&
             <Button
               size={(isMobile ? 'lg' : 'md')}
-              className={`bg-[#24292F] text-[white] cursor-none hoverable ${(isMobile ? ' w-1/2 h-[128px] text-3xl' : '')}`}
+              className={`transition shadow hover:shadow-[#24292F] hover:shadow-md bg-[#24292F] text-[white] cursor-none hoverable font-bold ${(isMobile ? ' w-1/2 h-[128px] text-3xl' : '')}`}
               href={githubURL}
               target="blank"
               as={Link}
               showAnchorIcon
-              variant="shadow"
+              variant="solid"
               anchorIcon={<IconBrandGithubFilled />}
             >
               GitHub
@@ -76,7 +75,7 @@ export const ProjectCard = ({ name, descriptions, images, githubURL, websiteURL 
           {(websiteURL !== "" || websiteURL) &&
             <Button
               size={(isMobile ? 'lg' : 'md')}
-              className={` cursor-none hoverable ${(isMobile ? ' w-1/2 h-[128px] text-3xl' : '')}`}
+              className={`transition shadow hover:shadow-[#18c964] font-bold hover:shadow-md cursor-none hoverable ${(isMobile ? ' w-1/2 h-[128px] text-3xl' : '')}`}
 
               href={websiteURL}
               target="blank"

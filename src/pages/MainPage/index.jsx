@@ -35,7 +35,7 @@ export default function MainPage() {
           <Image draggable={false} src={Icon} width={(isMobile ? 256 : 128)} height={128}></Image>
         </motion.div>
       </nav >
-      <motion.section className='flex flex-row gap-2 min-w-[100%] h-[60vh] h-fit p-2'
+      <motion.section className='flex flex-row gap-2 min-w-[100%] h-[60vh] h-fit p-4'
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
       >
