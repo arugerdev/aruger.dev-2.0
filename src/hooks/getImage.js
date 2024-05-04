@@ -14,10 +14,11 @@ import Image12 from '../assets/images/projects/listy_2.jpg'
 import Image13 from '../assets/images/projects/whatToDo_0.jpg'
 import Image14 from '../assets/images/projects/whatToDo_1.jpg'
 import Image15 from '../assets/images/projects/whatToDo_2.jpg'
+import Image16 from '../assets/images/projects/opire_0.jpg'
+import Image17 from '../assets/images/projects/opire_1.jpg'
+import Image18 from '../assets/images/projects/opire_2.jpg'
 
-
-export const getImage = (id) => {
-
+export const getImage = id => {
   switch (id) {
     case 0:
       return Image0
@@ -46,11 +47,16 @@ export const getImage = (id) => {
     case 12:
       return Image12
     case 13:
-      return Image13;
+      return Image13
     case 14:
       return Image14
     case 15:
       return Image15
+    case 16:
+      return Image16
+    case 17:
+      return Image17
+    case 18:
+      return Image18
   }
-
 }

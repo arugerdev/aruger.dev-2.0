@@ -148,6 +148,31 @@
       ],
       "name": "Games (In Itch.io)",
       "websiteURL": "https://alvaroch.itch.io/"
+    },
+    {
+      "descriptions": [
+        {
+          "description": "Opire is the new platform where you can participate in new projects and be rewarded as a developer, support projects and organizations as a reward creator, and streamline the process of creating your own software as a software owner."
+        },
+        {
+          "description": "I made a demo of what the landing page of your app could be."
+        }
+      ],
+      "gitHubURL": "https://github.com/arugerdev/opire-web",
+      "id": 5,
+      "images": [
+        {
+          "imagePath": 16
+        },
+        {
+          "imagePath": 17
+        },
+        {
+          "imagePath": 18
+        }
+      ],
+      "name": "Opire (LandingWeb Demo)",
+      "websiteURL": "https://opire-web.vercel.app/"
     }
   ]
 }
